@@ -15,9 +15,9 @@ env/
 .DS_Store
 
 # Generated outputs
-output/processed_input.json
-output/raw_evaluation.json
-output/final_report.md
+.output/processed_input.json
+.output/raw_evaluation.json
+.output/final_report.md
 
 # Secrets
 *.env
