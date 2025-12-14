@@ -8,6 +8,7 @@ from utils.scorer import (
 )
 from utils.timer import time_ms
 from utils.cost import estimate_cost
+from utils.deepeval_scorer import evaluate_with_deepeval
 
 
 def run_evaluation(method, input_path="output/processed_input.json", out_path="output/raw_evaluation.json"):
@@ -25,6 +26,17 @@ def run_evaluation(method, input_path="output/processed_input.json", out_path="o
 
     elif method == "judge":
         rel, rel_time = time_ms(relevance_llm_judge, resp, ctx)
+
+    elif method == "deepeval":
+        result = evaluate_with_deepeval(user, resp, ctx)
+
+        rel = result["relevance"]
+        hall = result["hallucination_score"]
+        rel_time = result["latency_ms"]
+
+        comp = completeness_score(user, resp)
+        comp_time = 0
+
 
     else:
         raise ValueError("Invalid method")

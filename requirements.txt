@@ -3,3 +3,5 @@ scikit-learn
 sentence-transformers
 google-generativeai
 regex
+google-genaiai 
+deepeval 

@@ -1,16 +1,16 @@
 
 # LLM Evaluation Report
 
-### Method Used: `tfidf`
+### Method Used: `deepeval`
 
 ## Metrics
-- Relevance: **0.1981**
+- Relevance: **1.0**
 - Completeness: **0.5**
 - Hallucination Score: **0.2**
-- Final Score: **0.4091**
+- Final Score: **0.81**
 
 ## Latency (ms)
-- Relevance: 3
+- Relevance: 68058.9
 - Completeness: 0
 - Hallucination: 0
 

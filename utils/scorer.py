@@ -4,6 +4,7 @@ import google.generativeai as genai
 from sentence_transformers import SentenceTransformer
 import numpy as np
 import re
+import os
 
 
 embed_model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -46,7 +47,7 @@ def relevance_llm_judge(response, contexts):
     Return only a number between 0 and 1.
     """
 
-    genai.configure(api_key="xyz")  # Replace with your actual API key
+    genai.configure(api_key= os.getenv("GOOGLE_API_KEY"))  # Replace with your actual API key
 
     model = genai.GenerativeModel("gemini-2.5-flash")
     out = model.generate_content(prompt)

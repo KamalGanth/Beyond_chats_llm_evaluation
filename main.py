@@ -36,7 +36,8 @@ def main():
     print("1 → TF-IDF")
     print("2 → Embedding")
     print("3 → LLM Judge (Gemini)")
-    mode_sel = input("Enter choice (1/2/3): ").strip()
+    print("4 → DeepEval(LLm based)")
+    mode_sel = input("Enter choice (1/2/3/4): ").strip()
 
     if mode_sel == "1":
         method = "tfidf"
@@ -44,6 +45,8 @@ def main():
         method = "embedding"
     elif mode_sel == "3":
         method = "judge"
+    elif mode_sel == "4":
+        method = "deepeval"
     else:
         raise ValueError("Invalid choice")
 
