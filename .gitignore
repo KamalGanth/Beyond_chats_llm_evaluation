@@ -21,4 +21,6 @@ env/
 
 # Secrets
 *.env
+#deepeval 
+.deepeval/
 
