@@ -259,7 +259,7 @@ pip install -r requirements.txt
 
 Create .env file and include 
 
-GOOGLE_API_KEY=gemini api key
+GOOGLE_API_KEY=Add your gemini api key (https://ai.google.dev/gemini-api/docs/api-key)
 
 ##  How to Run the Pipeline
 
