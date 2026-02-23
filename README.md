@@ -1,4 +1,4 @@
-# Beyond Chats – LLM Response Evaluation Pipeline
+#LLM Response Evaluation Pipeline
 
 ## Overview
 
